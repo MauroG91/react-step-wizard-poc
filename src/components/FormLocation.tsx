@@ -7,7 +7,16 @@ import {
   RegisterOptions,
 } from "react-hook-form";
 import usePlacesAutocomplete, { getGeocode } from "use-places-autocomplete";
-import { ILocation } from "../../../types/types";
+
+export interface ILocation {
+  city?: string;
+  region?: string;
+  regionCode?: string;
+  country?: string;
+  countryCode?: string;
+  lat: string;
+  lng: string;
+}
 
 interface IProps {
   name: string;

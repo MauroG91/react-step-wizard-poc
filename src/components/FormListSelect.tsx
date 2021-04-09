@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Label, List, Checkbox, Icon, Input } from "semantic-ui-react";
 import { Controller } from "react-hook-form";
-import RequiredAsterisk from "../../atoms/RequiredAsterisk";
+// import RequiredAsterisk from "../../atoms/RequiredAsterisk";
 import styles from "./FormListSelect.module.scss";
 
 export interface ISelectOption {
@@ -81,7 +81,7 @@ export default function FormListSelect({
             <List.Item>
               <List.Content className={styles.listContent}>
                 {content}
-                {required && <RequiredAsterisk />}
+                {/* {required && <RequiredAsterisk />} */}
               </List.Content>
             </List.Item>
             {search && (
