@@ -17,8 +17,8 @@ const Step1 = (props: any) => {
   }
 
   return (
-    <Grid>
-      <Grid.Column>
+    <div>
+      <Grid.Row>
         <FormInput
           name="firstName"
           content="First Name"
@@ -32,8 +32,8 @@ const Step1 = (props: any) => {
             },
           }}
         />
-      </Grid.Column>
-      <Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
         <FormInput
           name="lastName"
           content="Last Name"
@@ -47,11 +47,14 @@ const Step1 = (props: any) => {
             },
           }}
         />
-      </Grid.Column>
-      <Grid.Column>
-        <Controls {...props} />
-      </Grid.Column>
-    </Grid>
+      </Grid.Row>
+      <Grid.Row>
+        <Controls
+          {...props}
+          nextStep={Object.keys(errors).length === 0 ? nextStep : () => {}}
+        />
+      </Grid.Row>
+    </div>
   );
 };
 
