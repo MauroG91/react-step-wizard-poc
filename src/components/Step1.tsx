@@ -49,10 +49,7 @@ const Step1 = (props: any) => {
         />
       </Grid.Row>
       <Grid.Row>
-        <Controls
-          {...props}
-          nextStep={Object.keys(errors).length === 0 ? nextStep : () => {}}
-        />
+        <Controls {...props} />
       </Grid.Row>
     </div>
   );

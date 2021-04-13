@@ -6,7 +6,7 @@ import { Form } from "semantic-ui-react";
 
 function App() {
   const methods = useForm();
-  const onSubmit = (data: object) => console.log(data);
+  const onSubmit = (data: object) => alert(JSON.stringify(data));
 
   return (
     <FormProvider {...methods}>
