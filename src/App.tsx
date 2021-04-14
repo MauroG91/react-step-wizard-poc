@@ -5,7 +5,9 @@ import FormWrapper from "./FormWrapper";
 import { Form } from "semantic-ui-react";
 
 function App() {
-  const methods = useForm();
+  const methods = useForm({
+    shouldUnregister: false,
+  });
   const onSubmit = (data: object) => alert(JSON.stringify(data));
 
   return (

@@ -10,7 +10,7 @@ interface Props {}
 
 const options = [
   {
-    key: "21",
+    key: "18",
     value: "18",
     text: "18",
   },
@@ -31,9 +31,8 @@ const options = [
   },
 ];
 
-const Step2 = (props: any) => {
+const Step2 = (props: StepWizardChildProps & Props) => {
   const { control, errors } = useFormContext();
-  const { nextStep } = props;
   return (
     <div>
       <Grid.Row>

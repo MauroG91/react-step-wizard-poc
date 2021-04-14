@@ -2,7 +2,6 @@ import React from "react";
 import { useFormContext } from "react-hook-form";
 import { StepWizardChildProps } from "react-step-wizard";
 import { Grid } from "semantic-ui-react";
-import FormInput from "../form/FormInput";
 import FormListSelect from "../form/FormListSelect";
 import Controls from "./Controls";
 
@@ -21,9 +20,8 @@ const options = [
   },
 ];
 
-const Step3 = (props: any) => {
+const Step3 = (props: StepWizardChildProps & Props) => {
   const { control, errors } = useFormContext();
-  const { nextStep } = props;
   return (
     <div>
       <Grid.Row>
@@ -42,10 +40,8 @@ const Step3 = (props: any) => {
         />
       </Grid.Row>
       <Grid.Row>
-        <Controls
-          {...props}
-          nextStep={Object.keys(errors).length === 0 ? nextStep : () => {}}
-        />
+        <button type="submit">Submit</button>
+        <Controls {...props} />
       </Grid.Row>
     </div>
   );

@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Navigation.module.scss";
 
-interface Props {}
-
 const Navigation = (props: any) => {
   const { totalSteps, currentStep, goToStep } = props;
   const dots = [];

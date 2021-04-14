@@ -1,23 +1,16 @@
-import React, { CElement } from "react";
+import React from "react";
 import Controls from "./Controls";
-import { StepWizardChildProps, StepWizardProps } from "react-step-wizard";
+import { StepWizardChildProps } from "react-step-wizard";
 import FormInput from "../form/FormInput";
 import { useFormContext } from "react-hook-form";
-import { Grid } from "semantic-ui-react";
+import { Form, Grid } from "semantic-ui-react";
 
 interface Props {}
 
-const Step1 = (props: any) => {
+const Step1 = (props: StepWizardChildProps & Props) => {
   const { control, errors } = useFormContext();
-  const { nextStep } = props;
-  // console.log("name", name);
-
-  if (nextStep) {
-    // nextStep();
-  }
-
   return (
-    <div>
+    <Form>
       <Grid.Row>
         <FormInput
           name="firstName"
@@ -51,7 +44,7 @@ const Step1 = (props: any) => {
       <Grid.Row>
         <Controls {...props} />
       </Grid.Row>
-    </div>
+    </Form>
   );
 };
 
